@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+/* font-family: "Fraunces", serif;
+font-family: "Montserrat", sans-serif; */
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Fraunces", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: var(--font-primary);
+  background-color: var(--cream);
+}
+
+.card-container {
+  display: flex;
+  max-width: 100rem;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.img-container {
+  width: 50%;
+  overflow: hidden;
+}
+
+.product-img {
+  border-top-left-radius: 2.5rem;
+  border-bottom-left-radius: 2.5rem;
+  content: url("/frontend-mentor/newbie-challenges/img/image-product-desktop.jpg");
+  width: 100%;
+  height: 100%;
+}
+
+.product-desc-container {
+  background-color: var(--white);
+  width: 50%;
+  padding: 7rem;
+  border-top-right-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.product-category-text {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1rem;
+  color: var(--grayish-blue);
+}
+
+.product-title-text {
+  font-family: var(--font-secondary);
+  font-size: 5rem;
+  line-height: 5rem;
+  color: var(--dark-blue);
+}
+
+.product-desc-text {
+  font-size: 2.1rem;
+  line-height: 4rem;
+  color: var(--grayish-blue);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.new-price {
+  font-size: 4rem;
+  font-family: var(--font-secondary);
+  color: var(--dark-cyan);
+}
+
+.old-price {
+  color: var(--grayish-blue);
+  text-decoration: line-through;
+  font-size: 1.7rem;
+}
+
+.btn-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 2rem;
+  width: 100%;
+  background-color: var(--dark-cyan);
+  border-radius: 1rem;
+  color: var(--white);
+  font-weight: 700;
+  height: 7rem;
+  transition: all ease 0.5s;
+}
+
+.btn-cart:hover,
+.btn-cart:active {
+  background-color: hsl(158, 33%, 26%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 375px) {
+  .product-img {
+    border-radius: 0;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    content: url("/frontend-mentor/newbie-challenges/img/image-product-mobile.jpg");
+    width: 100%;
+  }
+  .card-container {
+    border-radius: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+  }
+
+  .img-container {
+    width: 100%;
+  }
+
+  .product-desc-container {
+    border-radius: 0;
+    width: 100%;
+    padding: 3rem;
+    border-bottom-right-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .product-category-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.8rem;
+  }
+
+  .product-title-text {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .product-desc-text {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  .price {
+    gap: 2rem;
+  }
+
+  .new-price {
+    font-size: 3rem;
+  }
+
+  .old-price {
+    font-size: 1.4rem;
+  }
+
+  .btn-cart {
+    font-size: 1.3rem;
+    height: 5rem;
+  }
+} ;
